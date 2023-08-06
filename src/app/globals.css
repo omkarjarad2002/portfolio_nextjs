@@ -2,26 +2,231 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background-color: #060214;
+  overflow-x: hidden;
+}
+.home {
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.container {
+  height: 800px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  border: 1px solid #060214;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin: 2rem;
+}
+.circle .image {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.info {
+  height: 300px;
+  width: 500px;
+  margin-left: 20rem;
+  margin-top: 10rem;
+}
+.name {
+  display: flex;
+}
+.text {
+  color: #ffffff;
+  margin: 4px;
+}
+.text-name {
+  color: #1007e8;
+  margin: 4px;
+  position: relative;
+}
+
+.text-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: typing 2.5s steps(200) infinite;
+  background: #060214;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media (max-width: 1314px) {
+  .info {
+    height: 100px;
+    width: 300px;
+    margin: 5rem;
+  }
+  .text {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.1rem;
+  }
+  .text-name {
+    color: #1007e8;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .circle {
+    height: 220px;
+    width: 220px;
+    margin: 10rem;
+  }
+  .circle .image {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 1020px) {
+  .info {
+    height: 50px;
+    width: 300px;
+    margin: 5rem;
+  }
+  .text {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.1rem;
+  }
+  .text-name {
+    color: #1007e8;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .circle {
+    height: 200px;
+    width: 200px;
+    margin: 5rem;
+  }
+  .circle .image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.arrow {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  margin-top: 10rem;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1314px) {
+  .arrow {
+    left: 54%;
+  }
+}
+@media (max-width: 1000px) {
+  .arrow {
+    left: 55%;
+  }
+}
+
+.arrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #1007e8 !important;
+  border-right: 3px solid #1007e8 !important;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: scroll 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+.skills-container {
+  height: 400px;
+  width: 100vw;
+}
+
+.skills_heading {
+  color: white;
+  margin-top: 2rem;
+}
+.logos {
+  display: flex;
+  margin: 4rem;
+  padding: 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.html_logo {
+  border-radius: 50%;
+  margin: 2rem;
+  height: 55px;
+  width: 55px;
+  border: 1px solid #1007e8;
+  cursor: pointer;
+}
+.image_html {
+  padding: 0px;
+  margin-top: 10px;
+  height: 35px;
+  width: auto;
+}
+.css_logo {
+  border-radius: 50%;
+  margin: 2rem;
+  height: 55px;
+  width: 55px;
+  border: 1px solid #1007e8;
+  cursor: pointer;
+}
+.image_css {
+  padding: 0px;
+  margin-left: 8px;
+  margin-top: 8px;
+  height: 35px;
+  width: auto;
+}
+
+.nextjs_css {
+  padding: 0px;
+  margin-left: 5px;
+  margin-top: 8px;
+  height: 35px;
+  width: auto;
 }
