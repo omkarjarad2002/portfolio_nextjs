@@ -22,7 +22,7 @@ body {
 }
 
 .circle {
-  border: 1px solid #060214;
+  border: 1px solid #fff;
   height: 300px;
   width: 300px;
   border-radius: 50%;
@@ -47,7 +47,7 @@ body {
   margin: 4px;
 }
 .text-name {
-  color: #1007e8;
+  color: #fff;
   margin: 4px;
   position: relative;
 }
@@ -128,8 +128,7 @@ body {
   height: 200px;
   width: 100px;
   position: absolute;
-  left: 50%;
-  top: 90%;
+  left: 53%;
   margin-top: 10rem;
   transform: translate(-50%, -50%);
 }
@@ -176,17 +175,19 @@ body {
 }
 
 .skills-container {
-  height: 400px;
+  height: 500px;
   width: 100vw;
+  margin-top: -2rem;
 }
 
 .skills_heading {
   color: white;
   margin-top: 2rem;
+  font-family: "Courier New", Courier, monospace;
 }
 .logos {
   display: flex;
-  margin: 4rem;
+  margin: 10rem;
   padding: 0px;
   text-align: center;
   align-items: center;
@@ -215,6 +216,10 @@ body {
   border: 1px solid #1007e8;
   cursor: pointer;
 }
+.image_logo {
+  margin-left: 2px;
+  margin-top: 6px;
+}
 .image_css {
   padding: 0px;
   margin-left: 8px;
@@ -229,4 +234,96 @@ body {
   margin-top: 8px;
   height: 35px;
   width: auto;
+}
+.nexjs_logo {
+  background-color: #fff;
+  border: 1px solid white !important;
+}
+.nextjs_image_logo {
+  margin-top: 8px;
+}
+
+.leetcode_div {
+  height: 100px;
+  width: 100vw;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.temp {
+  margin-top: 20rem;
+}
+
+.leetcode_logo {
+  border-radius: 50%;
+  margin: 10rem auto 2rem auto;
+  height: 55px;
+  width: 55px;
+  border: 1px solid #1007e8;
+  cursor: pointer;
+}
+.image_leetcode {
+  padding: 0px;
+  margin: 10px auto auto 12px;
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+}
+
+.projects_div {
+  margin: 10rem auto auto auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100vw;
+}
+
+.projects {
+  display: flex;
+  margin: 10rem;
+  padding: 0px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.project {
+  display: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 5rem auto;
+  height: 700px;
+  width: 600px;
+  border-radius: 8px;
+}
+
+.project_image {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 2rem auto;
+  height: 300px;
+  width: 350px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+
+.project_decs {
+  font-family: "Courier New", Courier, monospace;
+  margin: auto;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  width: 600px;
+  border-radius: 8px;
+}
+
+.blog_image {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
 }
