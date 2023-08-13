@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Arrow from "./Arrow";
 import Link from "next/link";
+import Education from "./Education";
+import Contact from "./Contact";
+// import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -196,6 +199,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Education />
+        <Contact />
+        {/* <Footer /> */}
       </div>
     </>
   );

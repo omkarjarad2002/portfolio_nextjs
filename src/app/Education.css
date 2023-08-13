@@ -1,0 +1,46 @@
+.education {
+  height: 1000px;
+  width: 800px;
+  margin: auto;
+}
+.project_image {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 2rem auto;
+  height: 300px;
+  width: 350px;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+
+.blog_image {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.edu_box {
+  margin-top: 10rem;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.ssc_head {
+  color: red;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  text-decoration: underline;
+}
+
+.ssc_desc {
+  color: grey;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.edu_10th_box {
+  margin-bottom: 5rem;
+}
