@@ -1,0 +1,155 @@
+/****************************** Desktop css****************************/
+.desktop_nav {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  /* border: 1px solid linear-gradient(-45deg, #db3b0a, #ab1515, #7a4476, #202433); */
+  border: 1px solid #060214;
+  display: flex;
+  box-shadow: 0px 0px 8px 1px rgb(191, 189, 189);
+  /* background: linear-gradient(-45deg, #db3b0a, #ab1515, #7a4476, #202433); */
+  /* background: #0074b7; */
+  /* background: #055c9d; */
+  background: #060214;
+  background-size: 200% 200%;
+}
+.div_ul {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: 7px;
+  margin: 7px;
+  width: 95%;
+}
+.div_ul ul {
+  display: flex;
+}
+.div_ul ul li {
+  padding: 4px;
+  border-radius: 8px;
+  width: auto;
+  height: 35px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.div_ul ul li a {
+  color: #ffffff;
+  cursor: pointer;
+}
+.div_ul ul li a:hover {
+  color: rgb(201, 201, 9);
+  cursor: pointer;
+}
+.div_img_profile_navbar {
+  width: 5%;
+  height: auto;
+  padding: 2.5px;
+  margin: 7px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.div_img_profile_navbar .navbar_img_in_div {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+.div_img_profile_navbar .navbar_img_in_div img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+.name_heading {
+  display: none;
+  width: 90%;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  margin: 5px;
+  padding: 5px;
+}
+
+/****************************** Mobile css****************************/
+
+@media (max-width: 998px) {
+  .desktop_nav {
+    height: 55px;
+    width: 100vw;
+    border: 1px solid #060214;
+    display: flex;
+    box-shadow: 0px 0px 8px 1px rgb(191, 189, 189);
+    background: #060214;
+    background-size: 200% 200%;
+    position: relative;
+  }
+  .div_ul {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 6px;
+    margin: 6px;
+    width: 92%;
+  }
+  .div_img_profile_navbar {
+    width: 8%;
+    height: auto;
+    padding: 2.5px;
+    margin: 7px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 998px) {
+  .div_ul {
+    display: none;
+  }
+  .div_img_profile_navbar {
+    display: none;
+  }
+  .name_heading {
+    display: block;
+    margin: 7px;
+    padding: 7px;
+    color: rgb(95, 16, 199);
+  }
+  .hamburger-menu {
+    display: block;
+    color: #ffffff;
+  }
+  .mobile_media {
+    height: 350px;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 7px;
+    margin: 7px;
+    width: 100%;
+    margin-top: 55px;
+    margin-right: -60px;
+    opacity: 1;
+  }
+  .mobile_media ul {
+    margin: 8px;
+    padding: 8px;
+    cursor: pointer;
+  }
+  .mobile_media ul li a {
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .mobile_media ul li a:hover {
+    color: yellow;
+    cursor: pointer;
+  }
+}

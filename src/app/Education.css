@@ -3,6 +3,10 @@
   width: 800px;
   margin: auto;
 }
+.edu_heading {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
 .project_image {
   text-align: center;
   align-items: center;
@@ -43,4 +47,11 @@
 }
 .edu_10th_box {
   margin-bottom: 5rem;
+}
+@media (max-width: 768px) {
+  .education {
+    height: 1000px;
+    width: 400px;
+    margin: auto;
+  }
 }

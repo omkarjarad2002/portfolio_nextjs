@@ -5,8 +5,8 @@ import Image from "next/image";
 
 function Education() {
   return (
-    <div className="education">
-      <h1 className=" skills_heading font-sans font-bold text-center text-3xl scroll-m-0.5">
+    <div className="education" id="education">
+      <h1 className=" edu_heading font-sans font-bold text-center text-3xl scroll-m-0.5">
         Education
       </h1>
       <Arrow />
@@ -29,7 +29,7 @@ function Education() {
           <h2 className=" ssc_head text-2xl">DEGREE : </h2>
           <h3 className="ssc_desc text-xl">Field : Information Technology</h3>
           <h3 className="ssc_desc text-xl">
-            Vidya Pratishthan's Kamalnayan Bajaj Institute of Engineering and
+            Vidya Pratishthans Kamalnayan Bajaj Institute of Engineering and
             Technology
           </h3>
           <h3 className="ssc_desc text-xl">CGPA : 8.43 (TE)</h3>

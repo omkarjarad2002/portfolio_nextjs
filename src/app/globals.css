@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #060214;
   overflow-x: hidden;
@@ -67,33 +69,31 @@ body {
     left: 100%;
   }
 }
-
-@media (max-width: 1314px) {
-  .info {
-    height: 100px;
-    width: 300px;
-    margin: 5rem;
-  }
-  .text {
-    color: #fff;
-    font-size: 1.5rem;
-    line-height: 1.1rem;
-  }
-  .text-name {
-    color: #1007e8;
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-  .circle {
-    height: 220px;
-    width: 220px;
-    margin: 10rem;
-  }
-  .circle .image {
-    height: 100%;
-    width: 100%;
-  }
+.info {
+  height: 100px;
+  width: 300px;
+  margin: 5rem;
 }
+.text {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.1rem;
+}
+.text-name {
+  color: #1007e8;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.circle {
+  height: 220px;
+  width: 220px;
+  margin: 10rem;
+}
+.circle .image {
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 1020px) {
   .info {
     height: 50px;
@@ -137,9 +137,25 @@ body {
     left: 54%;
   }
 }
+
 @media (max-width: 1000px) {
   .arrow {
     left: 55%;
+  }
+}
+@media (max-width: 950px) {
+  .arrow {
+    left: 56%;
+  }
+}
+@media (max-width: 600px) {
+  .arrow {
+    left: 59%;
+  }
+}
+@media (max-width: 450px) {
+  .arrow {
+    left: 60%;
   }
 }
 
@@ -147,8 +163,8 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  border-bottom: 3px solid #1007e8 !important;
-  border-right: 3px solid #1007e8 !important;
+  border-bottom: 3px solid #11063a !important;
+  border-right: 3px solid #11063a !important;
   transform: rotate(45deg);
   margin: -10px;
   animation: scroll 2s infinite;
@@ -304,9 +320,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 2rem auto 2rem auto;
-  height: 300px;
-  width: 350px;
-  border: 1px solid #ffffff;
+  border: 1px solid #11063a;
   border-radius: 8px;
 }
 
@@ -322,8 +336,30 @@ body {
   border-radius: 8px;
 }
 
-.blog_image {
-  height: 100%;
-  width: 100%;
-  border-radius: 8px;
+@media (max-width: 768px) {
+  .project_decs {
+    height: 320px;
+    width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .edu_10th_box {
+    height: 200px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: block;
+    height: 800px !important;
+    width: 400px !important;
+    margin: auto !important;
+  }
+  .circle {
+    margin: 2rem auto 2rem auto;
+  }
+  .info {
+    margin: 10rem auto auto 5rem;
+  }
 }

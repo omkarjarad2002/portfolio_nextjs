@@ -1,65 +1,92 @@
+"use client";
 import React, { useState } from "react";
 import "./Contact.css";
 import Arrow from "./Arrow";
+import axios from "axios";
 
 const Contact = () => {
-  //   const [formData, setFormData] = useState({
-  //     name: "",
-  //     email: "",
-  //     message: "",
-  //   });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    msg: "",
+  });
 
-  //   const handleChange = (e) => {
-  //     const { name, value } = e.target;
-  //     setFormData((prevData) => ({
-  //       ...prevData,
-  //       [name]: value,
-  //     }));
-  //   };
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     // Here you can add your form submission logic, like sending an email or saving to a database
-  //     console.log(formData);
-  //   };
+  const sendDetails = async (e: any) => {
+    e.preventDefault();
+    try {
+      const req = await axios.post("http://localhost:4000/contact", {
+        formData,
+      });
+      if (req.status == 201) {
+        alert("Message sent successfully!");
+      }
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        msg: "",
+      });
+    } catch (error) {
+      alert("Please provide a valid credentials!");
+    }
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    // Here you can add your form submission logic, like sending an email or saving to a database
+    console.log(formData);
+  };
 
   return (
-    // <form className="contact-form" onSubmit={handleSubmit}>
-    //   <input
-    //     type="text"
-    //     name="name"
-    //     placeholder="Your Name"
-    //     value={formData.name}
-    //     onChange={handleChange}
-    //     required
-    //   />
-    //   <input
-    //     type="email"
-    //     name="email"
-    //     placeholder="Your Email"
-    //     value={formData.email}
-    //     onChange={handleChange}
-    //     required
-    //   />
-    //   <textarea
-    //     name="message"
-    //     placeholder="Your Message"
-    //     value={formData.message}
-    //     onChange={handleChange}
-    //     required
-    //   ></textarea>
-    //   <button type="submit">Send Message</button>
-    // </form>
-    <div className="con_box">
+    <div className="con_box" id="contact">
       <h1 className=" skills_heading font-sans font-bold text-center text-3xl scroll-m-0.5">
-        React Us
+        Reach Us
       </h1>
       <Arrow />
-      <form className="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="your name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="your email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="phone"
+          name="phone"
+          placeholder="your phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
+        <textarea
+          name="msg"
+          placeholder="your message"
+          value={formData.msg}
+          onChange={handleChange}
+          required
+        ></textarea>
+        <button onClick={sendDetails} type="submit">
+          Send Message
+        </button>
       </form>
     </div>
   );
