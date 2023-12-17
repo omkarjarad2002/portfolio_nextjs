@@ -23,9 +23,12 @@ const Contact = () => {
   const sendDetails = async (e: any) => {
     e.preventDefault();
     try {
-      const req = await axios.post("http://localhost:4000/contact", {
-        formData,
-      });
+      const req = await axios.post(
+        "https://bistro-backend.onrender.com/contact",
+        {
+          formData,
+        }
+      );
       if (req.status == 201) {
         alert("Message sent successfully!");
       }
