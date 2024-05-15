@@ -23,13 +23,13 @@ body {
   justify-content: center;
 }
 
-.circle {
+/* .circle {
   border: 1px solid #fff;
-  height: 300px;
-  width: 300px;
+  height: 600px;
+  width: 400px;
   border-radius: 50%;
   margin: 2rem;
-}
+} */
 .circle .image {
   height: 100%;
   width: 100%;
@@ -200,6 +200,11 @@ body {
   color: white;
   margin-top: 2rem;
   font-family: "Courier New", Courier, monospace;
+  position: relative;
+  font-size: 4vw;
+  color: #252839;
+  -webkit-text-stroke: 1px #329d52;
+  text-transform: uppercase;
 }
 .logos {
   display: flex;
@@ -242,6 +247,13 @@ body {
   margin-top: 8px;
   height: 35px;
   width: auto;
+}
+
+#profile_img {
+  height: auto;
+  width: auto;
+  border-radius: 8px;
+  border: 1px solid green;
 }
 
 .nextjs_css {

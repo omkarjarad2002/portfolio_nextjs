@@ -22,9 +22,10 @@ const Contact = () => {
 
   const sendDetails = async (e: any) => {
     e.preventDefault();
+    console.log(formData);
     try {
       const req = await axios.post(
-        "https://bistro-backend.onrender.com/contact",
+        "https://portfolioserver-ts4z.onrender.com/contact",
         {
           formData,
         }
@@ -38,7 +39,9 @@ const Contact = () => {
         phone: "",
         msg: "",
       });
+      console.log(formData);
     } catch (error) {
+      console.log(error);
       alert("Please provide a valid credentials!");
     }
   };

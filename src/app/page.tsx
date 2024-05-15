@@ -16,11 +16,12 @@ export default function Home() {
         <div className="container" id="profile">
           <div className="circle">
             <Image
-              className="image"
-              src="/profile_pic.jpg"
+              // className="image"
+              id="profile_img"
+              src="/profile_picture.jpeg"
               alt=""
-              width={350}
-              height={350}
+              width={400}
+              height={700}
             ></Image>
           </div>
           <div className="info">
