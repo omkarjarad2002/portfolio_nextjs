@@ -55,7 +55,15 @@ function Projects() {
                   <h1 className="text-5xl tracking-wide my-4">
                     {project.title}
                   </h1>
-                  <p className="text-xl my-10">{project.description}</p>
+                  <p className="text-xl text-sky-600 my-10">
+                    {project.description}
+                  </p>
+                  <p className="text-green-600 underline py-4">
+                    <a href={project.frontendurl}>Front-End</a>
+                  </p>
+                  <p className="text-green-600 underline py-4">
+                    <a href={project.backendurl}>Back-End</a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -67,3 +75,4 @@ function Projects() {
 }
 
 export default Projects;
+
