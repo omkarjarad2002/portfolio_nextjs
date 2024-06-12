@@ -268,7 +268,7 @@ body {
   border: 1px solid white !important;
 }
 .nextjs_image_logo {
-  margin-top: 4px;
+  margin-top: 4px !important;
 }
 
 .leetcode_div {
