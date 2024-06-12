@@ -18,7 +18,7 @@ export default function Home() {
             <Image
               // className="image"
               id="profile_img"
-              src="/profile_picture.jpeg"
+              src="/profile_picture.jpg"
               alt=""
               width={400}
               height={700}

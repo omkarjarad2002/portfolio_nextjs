@@ -333,6 +333,8 @@ body {
   justify-content: center;
   margin: 2rem auto 2rem auto;
   border: 1px solid #11063a;
+  width: 550px !important;
+  height: 300px !important;
   border-radius: 8px;
 }
 

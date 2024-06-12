@@ -1,26 +1,53 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Arrow from "./Arrow";
-import projects from "./ProjectData";
+import axios from "axios";
+import projectData from "./ProjectData";
 
 function Projects() {
+  const [projects, setProjects] = useState([]);
+  // const [file, setFile] = useState("");
+
+  // const getProjects = async () => {
+  //   try {
+  //     const res = await axios.get("http://localhost:4000/getallprojects");
+
+  //     console.log(res.data[0].file);
+  //     setFile(res.data[0].file);
+  //     setProjects(res.data);
+  //   } catch (error) {
+  //     alert(error);
+  //   }
+  // };
+
+  // const myloader = () => {
+  //   return `http://localhost:4000/uploads/${file}`;
+  // };
+
+  // useEffect(() => {
+  //   getProjects();
+  // }, []);
+
   return (
     <div className="projects_div" id="projects">
       <h1 className=" skills_heading font-sans font-bold text-center text-3xl scroll-m-0.5">
         Projects
       </h1>
       <Arrow />
-      {projects.map((project) => (
-        <React.Fragment key={project.id}>
+      {projectData.map((project) => (
+        <React.Fragment key={project.title}>
           <div className="projects">
             <div className="row1">
               <div className="project">
                 <div className="project_image">
                   <Image
-                    className="blog_image"
+                    // loader={myloader}
+                    // src={`http://localhost:4000/uploads/${project.file}`}
                     src={project.image}
-                    alt=""
-                    width={350}
+                    className="blog_image"
+                    alt="..."
+                    width={400}
                     height={350}
                   ></Image>
                 </div>

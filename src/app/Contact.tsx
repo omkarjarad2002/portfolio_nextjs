@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./Contact.css";
 import Arrow from "./Arrow";
 import axios from "axios";
+import swal from "sweetalert";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,16 +23,16 @@ const Contact = () => {
 
   const sendDetails = async (e: any) => {
     e.preventDefault();
-    console.log(formData);
     try {
       const req = await axios.post(
         "https://portfolioserver-ts4z.onrender.com/contact",
+        // "http://localhost:4000/contact",
         {
           formData,
         }
       );
       if (req.status == 201) {
-        alert("Message sent successfully!");
+        swal("Thank You!", "Your message was sent!", "success");
       }
       setFormData({
         name: "",
@@ -39,10 +40,9 @@ const Contact = () => {
         phone: "",
         msg: "",
       });
-      console.log(formData);
     } catch (error) {
       console.log(error);
-      alert("Please provide a valid credentials!");
+      swal("Unexpected Error Occured!", "error");
     }
   };
 
