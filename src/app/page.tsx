@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import ContactSection from "./Collaboration";
 
 export default function Home() {
   return (
@@ -14,49 +15,61 @@ export default function Home() {
       <div className="home">
         <Navbar />
         <div className="container" id="profile">
+          <div className="info">
+            <div className="name">
+              <h1 className="text text-2xl">I`m</h1>
+              <h2 className="text-name text-2xl text-purple-400 ">
+                Omkar Jarad
+              </h2>
+            </div>
+            <h2 className="text-name text-2xl text-purple-400 ">
+              FULL STACK WEB DEVELOPER
+            </h2>
+            <h2 className="text-name text-2xl text-purple-400 ">PROGRAMMER</h2>
+            <p className="text-intro_para ">
+              I specialize in building scalable and user-friendly web appli-
+              cations using React.js, Node.js, MongoDB, and SQL. With a strong
+              foundation in Java, C++, Python, and JavaScript, I love solving
+              complex problems through clean and efficient code.
+            </p>
+          </div>
           <div className="circle">
             <Image
               // className="image"
               id="profile_img"
               src="/profile_picture.jpg"
               alt=""
-              width={400}
-              height={700}
+              width={600}
+              height={1000}
             ></Image>
           </div>
-          <div className="info">
-            <div className="name">
-              <h1 className="text text-2xl">I`m</h1>
-              <h2 className="text-name text-2xl">Omkar Jarad</h2>
-            </div>
-            <h2 className="text-name text-2xl">FULL STACK WEB DEVELOPER</h2>
-            <h2 className="text-name text-2xl">PROGRAMMER</h2>
-          </div>
         </div>
-        <Arrow />
+        {/* <Arrow /> */}
         <Skills />
-        <div className="temp" id="problemSol">
-          <h1 className=" skills_heading font-sans font-bold text-center text-3xl scroll-m-0.5">
+        <div className="m-10 p-10 text-center justify-center" id="problemSol">
+          <h1 className="text-purple-400 text-4xl md:text-5xl font-extrabold">
             Problem solving
           </h1>
-          <Arrow />
-          <div className="leetcode_div">
+          {/* <Arrow /> */}
+          <div className="text-center justify-center">
             <Link href="https://leetcode.com/jaradomkar24/" target="_blank">
               <div className="leetcode_logo ">
                 <Image
-                  className="image_leetcode"
+                  className="image_leetcode cursor-pointer"
                   src="/leetcode_logo.svg"
                   alt=""
-                  width={350}
-                  height={350}
+                  width={100}
+                  height={100}
                 ></Image>
               </div>
             </Link>
           </div>
         </div>
         <Projects />
+        <ContactSection />
         <Education />
         <Contact />
+
         <Footer />
       </div>
     </>

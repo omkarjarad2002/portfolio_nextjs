@@ -4,6 +4,7 @@ import "./Contact.css";
 import Arrow from "./Arrow";
 import axios from "axios";
 import swal from "sweetalert";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

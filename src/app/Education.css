@@ -1,7 +1,6 @@
 .education {
   height: 1000px;
   width: 800px;
-  margin: auto;
 }
 .edu_heading {
   color: white;
@@ -52,6 +51,5 @@
   .education {
     height: 1000px;
     width: 400px;
-    margin: auto;
   }
 }
