@@ -19,7 +19,7 @@ function ContactSection() {
         {" "}
         {/* Reduced width */}
         <img
-          src="/contactsection.webp"
+          src="/email.webp"
           alt="Illustration"
           className="w-4/5 sm:w-3/5 rounded-lg shadow-lg mx-auto" // Adjusted width
         />
